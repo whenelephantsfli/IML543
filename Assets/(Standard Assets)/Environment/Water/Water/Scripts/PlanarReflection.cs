@@ -90,7 +90,7 @@ namespace UnityStandardAssets.Water
 
 
 
-			Debug.Log("PlanarReflection - Creating new RenderTexture: " + rtWidth + " x " + rtHeight,this);
+//			Debug.Log("PlanarReflection - Creating new RenderTexture: " + rtWidth + " x " + rtHeight,this);
 			RenderTexture rt = new RenderTexture(rtWidth,rtHeight, 24, RenderTextureFormat.ARGBFloat);
 
             rt.hideFlags = HideFlags.DontSave;
@@ -173,7 +173,7 @@ namespace UnityStandardAssets.Water
 			if (rtWidth != rtWidth2 || rtHeight != rtHeight2) {
 				    rtWidth = rtWidth2;
 				    rtHeight = rtHeight2;
-				    Debug.Log("camera (" +currentCam.name +") changed at runtime, creating new RenderTexture",currentCam);
+//				    Debug.Log("camera (" +currentCam.name +") changed at runtime, creating new RenderTexture",currentCam);
 				    //	if (m_ReflectionCamera != null) {
 				   if(m_ReflectionCamera) DestroyImmediate(m_ReflectionCamera.gameObject);
 				   m_ReflectionCamera = CreateReflectionCameraFor(currentCam);
